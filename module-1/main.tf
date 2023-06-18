@@ -1,10 +1,11 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "pawan2876"
+  bucket = var.s3_bucket
   versioning {
     enabled = true
   }
   tags = {
     Name        = "My bucket"
     Environment = "Dev"
+  }  
   }
-}
+
